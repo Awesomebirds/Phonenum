@@ -10,7 +10,6 @@ String.prototype.fillZero = function (width) {
 let value = slider.value.fillZero(8);
 number.innerHTML = "010" + value;
 
-slider.addEventListener("mousemove", (e) => {
-  value = e.target.value.fillZero(8);
-  number.innerHTML = "010" + value;
-});
+slider.oninput = function () {
+  number.innerHTML = "010" + this.value.fillZero(8);
+};
