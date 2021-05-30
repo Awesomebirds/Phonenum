@@ -7,7 +7,7 @@ String.prototype.fillZero = function (width) {
     : new Array(width - this.length + 1).join("0") + this; //남는 길이만큼 0으로 채움
 };
 
-let value = slider.value;
+let value = slider.value.fillZero(8);
 number.innerHTML = "010" + value;
 
 slider.addEventListener("mousemove", (e) => {
